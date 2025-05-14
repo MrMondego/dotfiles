@@ -1,0 +1,3 @@
+# [[language]]
+# name = "css"
+# language-servers = [ "css-languageserver" ]

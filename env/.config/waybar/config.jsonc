@@ -72,7 +72,7 @@
   },
   "custom/exit": {
     "format": "<span foreground='#f38ba8'></span>",
-    "on-click": "wlogout",
+    "on-click": "wlogout -p layer-shell -b 5",
     "on-click-right": "hyprlock",
     "tooltip-format": "Left: Power menu\nRight: Lock screen"
   },
