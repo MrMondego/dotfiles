@@ -1,6 +1,6 @@
 {
   "position": "top",
-  "modules-left": ["hyprland/workspaces", "tray"],
+  "modules-left": ["hyprland/workspaces", "tray","hyprland/language"],
   "modules-center": ["hyprland/window"],
   "modules-right": [
     "network",
@@ -19,12 +19,17 @@
   "temperature": {
       // "thermal-zone": 2,
       // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+      "interval": 1,
       "critical-threshold": 80,
       // "format-critical": "{temperatureC}°C {icon}",
       "format": "{temperatureC}°C ",
       // "format-icons": ["", "", ""]
   },
-  
+  "hyprland/language": {
+    "format": "{}",
+    "format-en": "EN",
+    "format-ru": "RU"
+  },
   "power-profiles-daemon": {
     "format": "{icon}",
     "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
@@ -63,7 +68,7 @@
     "tooltip-format-wifi": "Signal Strenght: {signalStrength}%"
   },
   "pulseaudio": {
-      "format": "{icon}{volume}%",
+      "format": "{icon} {volume}%",
       "format-muted": "",
       "format-icons": {
           "default": ["", "", " "]

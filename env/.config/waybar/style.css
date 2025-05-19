@@ -69,7 +69,8 @@ button:hover {
 #network,
 #mode,
 #scratchpad,
-#custom-exit {
+#custom-exit,
+#language {
   /* margin-top: 2px; */
   /* margin-bottom: 2px; */
   /* margin-left: 4px; */
@@ -115,8 +116,8 @@ button:hover {
 }
 
 #temperature {
-    color: @rosewater;
-    border-bottom: 2px solid @rosewater;
+    color: @peach;
+    border-bottom: 2px solid @peach;
 }
 
 #power-profiles-daemon {
@@ -154,4 +155,10 @@ button:hover {
 }
 #tray * {
     padding: 0px 5px;
+}
+
+#language {
+    padding: 0px 5px;
+    color: @green;
+    border-bottom: 2px solid @green;
 }

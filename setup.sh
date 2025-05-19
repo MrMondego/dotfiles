@@ -79,6 +79,8 @@ symlink_files "$DEV_ENV/env/.local" "$HOME/.local"
 symlink_file "$DEV_ENV/env/.zsh_profile" "$HOME/.zsh_profile"
 symlink_file "$DEV_ENV/env/.zshrc" "$HOME/.zshrc"
 
+chmod +x ~/.config/wlogout/power.sh
+
 # Перезагружаем Hyprland (если используется)
 if [[ $dry_run == "0" ]] && command -v hyprctl &> /dev/null; then
     log "Reloading Hyprland..."
