@@ -1,15 +1,39 @@
 @import "mocha.css"; 
 
+@keyframes blink-warning {
+    70% {
+        color: @wm_icon_bg;
+    }
+
+    to {
+        color: @wm_icon_bg;
+        background-color: @yellow;
+    }
+}
+
+@keyframes blink-critical {
+    70% {
+        color: @wm_icon_bg;
+    }
+
+    to {
+        color: @wm_icon_bg;
+        background-color: @red;
+    }
+}
+
 * {
-    font-family: JetBrainsMonoNerdFont;
+    /* font-family: JetBrainsMonoNerdFont; */
     /* font-family: Font Awesome; */
-    font-size: 16px;
+    font-family: "JetBrainsMono NFP";
+    font-size: 15px;
     min-height: 0;
+    min-width: 0;
     font-weight: bold;
 }
 
 window#waybar {
-    background: transparent;
+    /* background: transparent; */
     background-color: @crust;
     color: @overlay0;
     transition-property: background-color;
@@ -36,7 +60,7 @@ button:hover {
 }
 
 #workspaces button {
-    padding: 0 4px;
+    padding: 0 7px;
 }
 
 #workspaces button.focused {
@@ -69,15 +93,10 @@ button:hover {
 #network,
 #mode,
 #scratchpad,
-#custom-exit,
-#language {
-  /* margin-top: 2px; */
-  /* margin-bottom: 2px; */
-  /* margin-left: 4px; */
-    min-width: 30px;
-  margin-right: 4px;
-  padding-left: 4px;
-  padding-right: 4px;
+#language, #custom-exit {
+    margin-right: 4px;
+    padding: 0.3rem 0.6rem;
+    margin: 0.1rem 0.25rem;
 }
 
 
@@ -129,6 +148,27 @@ button:hover {
 #battery {
     color: @green;
     border-bottom: 2px solid @green;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#battery.warning {
+    color: @yellow;
+}
+
+#battery.critical {
+    color: @red;
+}
+
+#battery.warning.discharging {
+    animation-name: blink-warning;
+    animation-duration: 3s;
+}
+
+#battery.critical.discharging {
+    animation-name: blink-critical;
+    animation-duration: 2s;
 }
 
 /* If workspaces is the leftmost module, omit left margin */
@@ -148,17 +188,13 @@ button:hover {
     padding-right: 6px;
 }
 
-#tray {
-    margin-left: 10px;
-    padding-left: 3px;
-    padding-right: 3px;
-}
-#tray * {
-    padding: 0px 5px;
-}
-
 #language {
     padding: 0px 5px;
     color: @green;
     border-bottom: 2px solid @green;
+}
+
+#custom-exit {
+    color: @red;
+    border-bottom: 2px solid @red;
 }

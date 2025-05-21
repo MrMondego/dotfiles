@@ -18,7 +18,7 @@ paru -Sy qimgv-git # Image viewer
 echo "Gambling"
 sudo pacman -Sy --noconfirm --needed --disable-download-timeout proton-cachyos protontricks steam steam-native-runtime
 
-
+systemctl --user enable --now hyprpolkitagent.service
 asusctl profile -P Balanced
 
 if [[ -e "$sddm_theme_script" ]]; then
