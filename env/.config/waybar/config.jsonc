@@ -5,8 +5,8 @@
   "exclusive": true,
   "passthrough": false,
   "fixed-center": true,
-  "modules-left": ["hyprland/workspaces", "tray","hyprland/language"],
-  "modules-center": ["hyprland/window"],
+  "modules-left": ["sway/workspaces","hyprland/workspaces", "tray","hyprland/language", "sway/language", "sway/mode"],
+  "modules-center": ["sway/window", "hyprland/window"],
   "modules-right": [
     "network",
     "pulseaudio",
@@ -34,7 +34,7 @@
       "format": " {temperatureC}°C",
       // "format-icons": ["", "", ""]
   },
-  "hyprland/language": {
+  "sway/language": {
     "format": "   {}",
     "format-en": "EN",
     "format-ru": "RU"
@@ -72,7 +72,7 @@
   },
   "network": {
     "format-wifi": "   {essid}",
-    "format-ethernet": "󰤭  Disconnected",
+    "format-ethernet": "  Connected",
     "format-linked": "{ifname} (No IP) ",
     "format-disconnected": "  Disconnected",
     "tooltip-format-wifi": "Signal Strenght: {signalStrength}%"

@@ -7,3 +7,6 @@ color-modes = true
 [editor.cursor-shape]
 normal = "block"
 select = "underline"
+
+[editor.indent-guides]
+render = true

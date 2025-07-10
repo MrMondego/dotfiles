@@ -12,7 +12,7 @@ sudo pacman -Sy --noconfirm brightnessctl
 brightnessctl s 100%
 
 echo "Hyprland and other"
-sudo pacman -Sy --noconfirm --needed --disable-download-timeout ghostty neovim sddm hyprland rofi-wayland
+sudo pacman -Sy --noconfirm --needed --disable-download-timeout ghostty neovim sddm hyprland rofi-wayland hyprpaper dunst
 sudo pacman -Sy --noconfirm --needed --disable-download-timeout telegram-desktop snapper xdg-desktop-portal-hyprland wl-clipboard wl-clip-persist grimblast waybar wlogout udiskie hyprpolkitagent
 paru -Sy qimgv-git # Image viewer
 echo "Gambling"
